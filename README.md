@@ -1,3 +1,5 @@
+This is my modified version of the utility because I do not like the original bundling together changes, especially ones that have no benefit or can even be harmful.
+
 # Chris Titus Tech's Windows Utility
 
 [![Version](https://img.shields.io/github/v/release/ChrisTitusTech/winutil?color=%230567ff&label=Latest%20Release&style=for-the-badge)](https://github.com/ChrisTitusTech/winutil/releases/latest)
