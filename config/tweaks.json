@@ -2089,10 +2089,6 @@
             Remove-Item -Path \"HKLM:\\SOFTWARE\\Policies\\Microsoft\\Edge\" -Recurse -ErrorAction SilentlyContinue
         }
 
-        # Group svchost.exe processes
-        $ram = (Get-CimInstance -ClassName Win32_PhysicalMemory | Measure-Object -Property Capacity -Sum).Sum / 1kb
-        Set-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\" -Name \"SvcHostSplitThresholdInKB\" -Type DWord -Value $ram -Force
-
         $autoLoggerDir = \"$env:PROGRAMDATA\\Microsoft\\Diagnosis\\ETLLogs\\AutoLogger\"
         If (Test-Path \"$autoLoggerDir\\AutoLogger-Diagtrack-Listener.etl\") {
             Remove-Item \"$autoLoggerDir\\AutoLogger-Diagtrack-Listener.etl\"
